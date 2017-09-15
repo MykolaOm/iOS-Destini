@@ -68,14 +68,12 @@ class ViewController: UIViewController {
             
         else if sender.tag == 1 && storyIndex == 3{
             storyTextView.text = story6
-            topButton.isHidden = true
-            bottomButton.isHidden = true
+            hideButtons()
             storyIndex = 6
         }
         else if sender.tag == 2 && storyIndex == 3{
             storyTextView.text = story5
-            topButton.isHidden = true
-            bottomButton.isHidden = true
+            hideButtons()
             storyIndex = 5
         }
         
@@ -84,8 +82,7 @@ class ViewController: UIViewController {
             
        else if sender.tag == 2 && storyIndex == 2 {
             storyTextView.text = story4
-            topButton.isHidden = true
-            bottomButton.isHidden = true
+            hideButtons()
             storyIndex = 4
         }
         // TODO Step 6: Modify the IF-Statement to complete the story
@@ -110,6 +107,10 @@ class ViewController: UIViewController {
         bottomButton.isHidden = false
         
 
+    }
+    func hideButtons(){
+        topButton.isHidden = true
+        bottomButton.isHidden = true
     }
         
     override func didReceiveMemoryWarning() {
